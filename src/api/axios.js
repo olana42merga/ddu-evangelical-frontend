@@ -1,6 +1,9 @@
 import axios from 'axios';
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080/api',
+  // Uses Vercel environment variable if it exists, otherwise uses your live Render backend
+  baseURL: import.meta.env.VITE_API_URL || 'https://ddu-evangelical-backend.onrender.com/api',
   headers: { 'Content-Type': 'application/json' }
 });
+
 export default api;
