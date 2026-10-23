@@ -257,8 +257,8 @@ export default function Contact() {
             </div>
           </Reveal>
 
-          <Row className="g-4">
-            <Col md={6} lg={3}>
+          <Row className="g-3">
+            <Col md={6} lg={4}>
               <Reveal delay={0}>
                 <Card
                   className="h-100 text-center border-0 shadow-sm p-4"
@@ -284,7 +284,7 @@ export default function Contact() {
               </Reveal>
             </Col>
 
-            <Col md={6} lg={3}>
+            <Col md={6} lg={4}>
               <Reveal delay={100}>
                 <Card
                   className="h-100 text-center border-0 shadow-sm p-4"
@@ -320,9 +320,10 @@ export default function Contact() {
               </Reveal>
             </Col>
 
-            <Col md={6} lg={3}>
+            <Col md={6} lg={4}>
               <Reveal delay={200}>
                 <Card
+
                   className="h-100 text-center border-0 shadow-sm p-4"
                   style={hoverLift.base}
                   onMouseEnter={(e) => hoverLift.enter(e, '#27ae60')}
@@ -356,69 +357,6 @@ export default function Contact() {
               </Reveal>
             </Col>
 
-            <Col md={6} lg={3}>
-              <Reveal delay={300}>
-                <Card
-                  className="h-100 text-center border-0 shadow-sm p-4 position-relative overflow-hidden"
-                  style={{
-                    ...hoverLift.base,
-                    background: 'linear-gradient(135deg, #fafafa, #ffffff)'
-                  }}
-                  onMouseEnter={(e) => hoverLift.enter(e, '#FE2C55')}
-                  onMouseLeave={hoverLift.leave}
-                >
-                  <div
-                    className="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
-                    style={{
-                      width: '70px',
-                      height: '70px',
-                      background:
-                        'linear-gradient(135deg, #000000 0%, #25F4EE 55%, #FE2C55 100%)',
-                      flexShrink: 0,
-                      boxShadow: '0 8px 22px rgba(254,44,85,0.30)'
-                    }}
-                  >
-                    <FaTiktok size={30} color="white" />
-                  </div>
-                  <h5 className="fw-bold">TikTok</h5>
-                  <p className="text-muted small mb-2">@focus.fellowship</p>
-
-                  <div className="d-flex justify-content-center gap-3 mb-3">
-                    <div className="text-center">
-                      <div className="fw-bold text-dark" style={{ fontSize: '0.95rem' }}>
-                        2.2K
-                      </div>
-                      <div className="text-muted" style={{ fontSize: '0.7rem' }}>
-                        Followers
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="fw-bold text-dark" style={{ fontSize: '0.95rem' }}>
-                        21.4K
-                      </div>
-                      <div className="text-muted" style={{ fontSize: '0.7rem' }}>
-                        Likes
-                      </div>
-                    </div>
-                  </div>
-
-                  <Button
-                    href={TIKTOK_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-0"
-                    style={{
-                      background:
-                        'linear-gradient(135deg, #25F4EE 0%, #FE2C55 100%)',
-                      boxShadow: '0 6px 18px rgba(254,44,85,0.35)'
-                    }}
-                    size="sm"
-                  >
-                    <FaTiktok className="me-2" /> Follow Us
-                  </Button>
-                </Card>
-              </Reveal>
-            </Col>
           </Row>
         </Container>
       </div>
@@ -427,7 +365,7 @@ export default function Contact() {
       <div className="bg-light py-5">
         <Container>
           <Row className="g-4 align-items-stretch">
-            <Col lg={7}>
+            <Col lg={12}>
               <Reveal>
                 <Card className="border-0 shadow-sm h-100 overflow-hidden">
                   <div
@@ -462,85 +400,6 @@ export default function Contact() {
               </Reveal>
             </Col>
 
-            <Col lg={5}>
-              <Reveal delay={150}>
-                <Card className="border-0 shadow-sm h-100 p-4">
-                  <h4 className="fw-bold text-center mb-4">
-                    Follow Us on Social Media
-                  </h4>
-                  <div className="d-flex flex-column gap-3">
-                    <Button
-                      href={TELEGRAM_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-0 d-flex align-items-center justify-content-start py-3 ps-4"
-                      style={{
-                        background: 'linear-gradient(135deg, #0088cc, #00bcd4)',
-                        borderRadius: '12px',
-                        fontSize: '1rem'
-                      }}
-                    >
-                      <FaTelegram className="me-3" size={20} /> Telegram Group
-                    </Button>
-
-                    <Button
-                      href={TIKTOK_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-0 d-flex align-items-center justify-content-start py-3 ps-4"
-                      style={{
-                        background:
-                          'linear-gradient(135deg, #000000 0%, #25F4EE 55%, #FE2C55 100%)',
-                        borderRadius: '12px',
-                        fontSize: '1rem',
-                        color: 'white',
-                        boxShadow: '0 6px 18px rgba(254,44,85,0.25)'
-                      }}
-                    >
-                      <FaTiktok className="me-3" size={20} /> TikTok
-                    </Button>
-
-                    <Button
-                      href={FACEBOOK_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-0 d-flex align-items-center justify-content-start py-3 ps-4"
-                      style={{
-                        background: 'linear-gradient(135deg, #1877F2, #0d5bcc)',
-                        borderRadius: '12px',
-                        fontSize: '1rem',
-                        color: 'white',
-                        boxShadow: '0 6px 18px rgba(24,119,242,0.30)'
-                      }}
-                    >
-                      <FaFacebook className="me-3" size={20} /> Facebook Page
-                    </Button>
-
-                    <Button
-                      variant="danger"
-                      className="d-flex align-items-center justify-content-start py-3 ps-4"
-                      style={{ borderRadius: '12px', fontSize: '1rem' }}
-                      disabled
-                    >
-                      <FaYoutube className="me-3" size={20} /> YouTube (soon)
-                    </Button>
-
-                    <Button
-                      className="border-0 d-flex align-items-center justify-content-start py-3 ps-4"
-                      style={{
-                        background:
-                          'linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)',
-                        borderRadius: '12px',
-                        fontSize: '1rem'
-                      }}
-                      disabled
-                    >
-                      <FaInstagram className="me-3" size={20} /> Instagram (soon)
-                    </Button>
-                  </div>
-                </Card>
-              </Reveal>
-            </Col>
           </Row>
         </Container>
       </div>
