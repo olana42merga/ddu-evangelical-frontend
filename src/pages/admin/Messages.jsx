@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Card, Table, Button, Form, Modal, Alert, Badge } from 'react-bootstrap';
 import Header from '../../components/Header';
 
-const API = 'https://ddu-evangelical-backend.onrender.com/api';
+const API = 'https://ddu-evangelical-backend-3.onrender.com/api';
 
 export default function Messages() {
   const [messages, setMessages] = useState([]);

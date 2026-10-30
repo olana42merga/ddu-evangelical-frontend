@@ -4,8 +4,8 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { FaArrowRight } from 'react-icons/fa';
 
-const API = 'https://ddu-evangelical-backend.onrender.com/api';
-const BASE = 'https://ddu-evangelical-backend.onrender.com';
+const API = 'https://ddu-evangelical-backend-3.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend-3.onrender.com';
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);

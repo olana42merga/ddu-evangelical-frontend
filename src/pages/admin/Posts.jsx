@@ -3,8 +3,8 @@ import { Container, Card, Button, Form, Row, Col, Alert, Spinner, Modal } from '
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import Header from '../../components/Header';
 
-const API = 'https://ddu-evangelical-backend.onrender.com/api';
-const BASE = 'https://ddu-evangelical-backend.onrender.com';
+const API = 'https://ddu-evangelical-backend-3.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend-3.onrender.com';
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
