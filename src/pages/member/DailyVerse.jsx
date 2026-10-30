@@ -3,7 +3,7 @@ import { Container, Card, Spinner } from 'react-bootstrap';
 import { FaBook } from 'react-icons/fa';
 import Sidebar from '../../components/Sidebar';
 
-const API = 'http://localhost:8080/api';
+const API = 'https://ddu-evangelical-backend.onrender.com/api';
 
 export default function DailyVerse() {
   const [verse, setVerse] = useState(null);

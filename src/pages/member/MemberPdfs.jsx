@@ -3,8 +3,8 @@ import { Card, Table, Spinner, Button, Row, Col } from 'react-bootstrap';
 import { FaDownload, FaEye, FaFilePdf } from 'react-icons/fa';
 import MemberLayout from '../../components/MemberLayout';
 
-const API = 'http://localhost:8080/api';
-const BASE = 'http://localhost:8080';
+const API = 'https://ddu-evangelical-backend.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend.onrender.com';
 
 export default function MemberPdfs() {
   const [pdfs, setPdfs] = useState([]);

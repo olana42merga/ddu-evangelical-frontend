@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Card, Table, Button, Form, Row, Col, Alert, Spinner } from 'react-bootstrap';
 import Header from '../../components/Header';
 
-const API = 'http://localhost:8080/api';
-const BASE = 'http://localhost:8080';
+const API = 'https://ddu-evangelical-backend.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend.onrender.com';
 
 export default function Pdfs() {
   const [pdfs, setPdfs] = useState([]);

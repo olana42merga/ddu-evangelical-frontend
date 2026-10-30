@@ -3,7 +3,7 @@ import { Card, Form, Button, Alert, Spinner, Row, Col } from 'react-bootstrap';
 import { FaPhone, FaUniversity, FaCopy, FaUpload, FaFileAlt, FaImage, FaTimes } from 'react-icons/fa';
 import MemberLayout from '../../components/MemberLayout';
 
-const API = 'http://localhost:8080/api';
+const API = 'https://ddu-evangelical-backend.onrender.com/api';
 
 export default function SendGift() {
   const [amount, setAmount] = useState('');

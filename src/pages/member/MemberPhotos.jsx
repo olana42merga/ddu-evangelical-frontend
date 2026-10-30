@@ -3,8 +3,8 @@ import { Card, Row, Col, Spinner, Button, Modal } from 'react-bootstrap';
 import { FaDownload, FaImage } from 'react-icons/fa';
 import MemberLayout from '../../components/MemberLayout';
 
-const API = 'http://localhost:8080/api';
-const BASE = 'http://localhost:8080';
+const API = 'https://ddu-evangelical-backend.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend.onrender.com';
 
 export default function MemberPhotos() {
   const [photos, setPhotos] = useState([]);

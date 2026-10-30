@@ -9,8 +9,8 @@ import {
 } from 'react-icons/fa';
 import '../../styles/hero.css';
 
-const API = 'http://localhost:8080/api';
-const BASE = 'http://localhost:8080';
+const API = 'https://ddu-evangelical-backend.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend.onrender.com';
 
 const TELEGRAM_URL = 'https://t.me/+iXVyakK4-3lhYzc0';
 
@@ -65,7 +65,6 @@ export default function Home() {
   const [selected, setSelected] = useState(null);
   const [slide, setSlide] = useState(0);
 
-  /* Hero rotation */
   useEffect(() => {
     const interval = setInterval(() => {
       setSlide(prev => (prev + 1) % HERO_IMAGES.length);
@@ -73,7 +72,6 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  /* Data fetching */
   useEffect(() => {
     fetch(API + '/verses')
       .then(r => r.json())
@@ -89,7 +87,6 @@ export default function Home() {
       .finally(() => setLoading(false));
   }, []);
 
-  /* Hover lift */
   const cardStyle = {
     cursor: 'pointer',
     transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -114,7 +111,7 @@ export default function Home() {
       <Header />
 
       {/* ═══════════════════════════════════════════ */}
-      {/* HERO SLIDER (TEXT UPGRADED)                 */}
+      {/* HERO SLIDER                                 */}
       {/* ═══════════════════════════════════════════ */}
       <div className="hero-rotating">
         {HERO_IMAGES.map((img, i) => (
@@ -124,21 +121,21 @@ export default function Home() {
             style={{ backgroundImage: `url(${img})` }}
           />
         ))}
-        <div className="hero-overlay" style={{ background: 'rgba(0, 0, 0, 0.4)' }} />
-        <div className="hero-content">
-          
-          {/* Attractive Text Box Background */}
+        {/* REMOVED blur, kept a very slight dark tint so the text box pops */}
+        <div className="hero-overlay" style={{ background: 'rgba(0, 0, 0, 0.15)' }} />
+        
+        <div className="hero-content px-3">
+          {/* Glassmorphism Text Box - Responsive Padding */}
           <div style={{ 
-            background: 'rgba(26, 42, 74, 0.7)', 
-            backdropFilter: 'blur(10px)', 
-            padding: '40px 20px', 
+            background: 'rgba(26, 42, 74, 0.85)', 
+            padding: 'clamp(20px, 5vw, 50px) clamp(15px, 4vw, 40px)', 
             borderRadius: '20px',
             maxWidth: '900px',
             margin: '0 auto',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-            border: '1px solid rgba(255,255,255,0.1)'
+            boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
+            border: '1px solid rgba(255,255,255,0.15)'
           }}>
-            <h1 className="fw-bold mb-4" style={{ fontSize: '3.5rem', letterSpacing: '-1px', lineHeight: '1.2' }}>
+            <h1 className="fw-bold mb-3 mb-md-4" style={{ fontSize: 'clamp(1.8rem, 5vw, 3.5rem)', letterSpacing: '-1px', lineHeight: '1.2' }}>
               Welcome to <br />
               <span style={{ 
                 background: 'linear-gradient(90deg, #3498db, #f39c12)', 
@@ -149,15 +146,15 @@ export default function Home() {
               </span>
             </h1>
             
-            <div style={{ fontSize: '1.25rem', lineHeight: '1.8', color: '#e0e0e0' }}>
+            <div style={{ fontSize: 'clamp(0.95rem, 3vw, 1.25rem)', lineHeight: '1.8', color: '#e0e0e0' }}>
               <span style={{ color: '#f39c12', fontWeight: 'bold' }}>“Yesus deebisee,</span> Karichi, 
               dhugaan, jireenyis, ana; anaan yoo ta'e malee, 
               eenyu iyyuu gara abbaa hin dhufu. 
               <span style={{ color: '#f39c12', fontWeight: 'bold' }}> (Yoh 14:6)”</span>
             </div>
           </div>
-
         </div>
+        
         <div className="hero-dots">
           {HERO_IMAGES.map((_, i) => (
             <div
@@ -174,36 +171,36 @@ export default function Home() {
       {/* ═══════════════════════════════════════════ */}
       <div className="bg-white py-4 border-bottom">
         <Container>
-          <Row className="text-center g-4">
+          <Row className="text-center g-3 g-md-4">
             <Col xs={6} md={3}>
-              <div className="fw-bold text-primary" style={{ fontSize: '2.2rem' }}>
+              <div className="fw-bold text-primary" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)' }}>
                 2.2K+
               </div>
-              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1.5px' }}>
+              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1px', fontSize: '0.75rem' }}>
                 TikTok Followers
               </div>
             </Col>
             <Col xs={6} md={3}>
-              <div className="fw-bold text-success" style={{ fontSize: '2.2rem' }}>
+              <div className="fw-bold text-success" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)' }}>
                 5+
               </div>
-              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1.5px' }}>
+              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1px', fontSize: '0.75rem' }}>
                 Years of Ministry
               </div>
             </Col>
             <Col xs={6} md={3}>
-              <div className="fw-bold text-warning" style={{ fontSize: '2.2rem' }}>
+              <div className="fw-bold text-warning" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)' }}>
                 100+
               </div>
-              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1.5px' }}>
+              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1px', fontSize: '0.75rem' }}>
                 Students Reached
               </div>
             </Col>
             <Col xs={6} md={3}>
-              <div className="fw-bold text-danger" style={{ fontSize: '2.2rem' }}>
+              <div className="fw-bold text-danger" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.2rem)' }}>
                 Weekly
               </div>
-              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1.5px' }}>
+              <div className="text-muted small text-uppercase fw-bold" style={{ letterSpacing: '1px', fontSize: '0.75rem' }}>
                 Fellowship Meetings
               </div>
             </Col>
@@ -221,7 +218,7 @@ export default function Home() {
               <Badge bg="primary" className="mb-2 px-3 py-2 rounded-pill fw-bold text-uppercase" style={{ letterSpacing: '1px' }}>
                 News & Updates
               </Badge>
-              <h2 className="fw-bold mb-2" style={{ color: '#2c3e50', fontSize: '2.5rem' }}>
+              <h2 className="fw-bold mb-2" style={{ color: '#2c3e50', fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>
                 Latest Posts
               </h2>
               <p className="text-muted fs-5">Reflections and updates from our team</p>
@@ -233,7 +230,7 @@ export default function Home() {
               <Spinner animation="border" variant="primary" />
             </div>
           ) : posts.length === 0 ? (
-            <Card className="border-0 shadow-sm p-5 text-center">
+            <Card className="border-0 shadow-sm p-4 p-md-5 text-center">
               <FaBible size={48} className="text-primary mb-3 mx-auto opacity-50" />
               <h5 className="text-muted fw-bold">No posts yet</h5>
               <p className="text-muted mb-0">Check back soon for updates from the team.</p>
@@ -299,7 +296,7 @@ export default function Home() {
       </div>
 
       {/* ═══════════════════════════════════════════ */}
-      {/* SCRIPTURE BANNER (TEXT UPGRADED)            */}
+      {/* SCRIPTURE BANNER                            */}
       {/* ═══════════════════════════════════════════ */}
       <div
         className="py-5 text-white position-relative overflow-hidden"
@@ -308,8 +305,8 @@ export default function Home() {
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 20% 40%, rgba(52,152,219,0.35), transparent 55%), radial-gradient(circle at 85% 60%, rgba(241,196,15,0.15), transparent 55%)', pointerEvents: 'none' }} />
         <Container className="position-relative text-center" style={{ zIndex: 1 }}>
           <Reveal>
-            <FaQuoteLeft size={50} className="text-warning mb-4 opacity-50" />
-            <h2 className="fst-italic mb-4 mx-auto fw-bold" style={{ fontSize: '1.8rem', maxWidth: '900px', lineHeight: 1.6, textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+            <FaQuoteLeft size={40} className="text-warning mb-4 opacity-50" />
+            <h2 className="fst-italic mb-4 mx-auto fw-bold" style={{ fontSize: 'clamp(1.2rem, 3.5vw, 1.8rem)', maxWidth: '900px', lineHeight: 1.6, textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
               "Egaa dhaqaa, maqaa abbaatii fi ilmaatti, kan Hafuura Qulqulluuttis isaan cuuphuudhaan, <span style={{ color: '#f39c12' }}>saba hundumaa bartoota koo godhaa!</span>"
             </h2>
             <Badge bg="warning" text="dark" className="px-4 py-2 rounded-pill fs-6 fw-bold shadow">
@@ -320,7 +317,7 @@ export default function Home() {
       </div>
 
       {/* ═══════════════════════════════════════════ */}
-      {/* WHAT WE DO — 3 CARDS (TEXT UPGRADED)        */}
+      {/* WHAT WE DO — 3 CARDS                        */}
       {/* ═══════════════════════════════════════════ */}
       <div className="bg-white py-5">
         <Container>
@@ -329,7 +326,7 @@ export default function Home() {
               <Badge bg="success" className="mb-2 px-3 py-2 rounded-pill fw-bold text-uppercase" style={{ letterSpacing: '1px' }}>
                 Our Pillars
               </Badge>
-              <h2 className="fw-bold mb-2" style={{ color: '#2c3e50', fontSize: '2.5rem' }}>
+              <h2 className="fw-bold mb-2" style={{ color: '#2c3e50', fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>
                 What We Do
               </h2>
               <p className="text-muted fs-5">Our mission in action</p>
@@ -338,7 +335,7 @@ export default function Home() {
 
           <Row className="g-4">
             {/* BIBLE VERSE CARD */}
-            <Col md={4}>
+            <Col xs={12} md={4}>
               <Reveal delay={0}>
                 <Card
                   className="h-100 text-center border-0 shadow-sm"
@@ -378,7 +375,7 @@ export default function Home() {
             </Col>
 
             {/* GIVING CARD */}
-            <Col md={4}>
+            <Col xs={12} md={4}>
               <Reveal delay={100}>
                 <Card
                   as={Link}
@@ -407,7 +404,7 @@ export default function Home() {
             </Col>
 
             {/* FELLOWSHIP CARD */}
-            <Col md={4}>
+            <Col xs={12} md={4}>
               <Reveal delay={200}>
                 <Card
                   as={Link}
@@ -439,7 +436,7 @@ export default function Home() {
       </div>
 
       {/* ═══════════════════════════════════════════ */}
-      {/* JOIN US CTA (TEXT UPGRADED)                 */}
+      {/* JOIN US CTA                                 */}
       {/* ═══════════════════════════════════════════ */}
       <div className="bg-light py-5">
         <Container>
@@ -448,17 +445,17 @@ export default function Home() {
               className="border-0 shadow-lg overflow-hidden"
               style={{ background: 'linear-gradient(135deg, #fffaf0, #ffffff)', borderLeft: '8px solid #f39c12' }}
             >
-              <Card.Body className="p-5 text-center">
+              <Card.Body className="p-4 p-md-5 text-center">
                 <div className="rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style={{ width: '80px', height: '80px', background: 'linear-gradient(135deg, #f39c12, #e67e22)', boxShadow: '0 10px 20px rgba(243,156,18,0.3)' }}>
                   <FaHeart size={36} color="white" />
                 </div>
-                <h2 className="fw-bold mb-3" style={{ color: '#2c3e50', fontSize: '2.2rem' }}>
+                <h2 className="fw-bold mb-3" style={{ color: '#2c3e50', fontSize: 'clamp(1.8rem, 4vw, 2.2rem)' }}>
                   Join Our Fellowship
                 </h2>
-                <p className="text-muted mb-4 mx-auto fs-5" style={{ maxWidth: '650px', lineHeight: '1.7' }}>
+                <p className="text-muted mb-4 mx-auto" style={{ maxWidth: '650px', lineHeight: '1.7', fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}>
                   Whether you are a new student, a returning member, or simply curious about faith — you are welcome here. <strong>Come as you are.</strong>
                 </p>
-                <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                <div className="d-flex justify-content-center flex-column flex-sm-row gap-3 mt-4">
                   <Button
                     as={Link}
                     to="/contact"
@@ -492,7 +489,7 @@ export default function Home() {
         <Modal.Header closeButton className="border-0 pb-0">
           <Modal.Title className="fw-bold fs-4" style={{ color: '#2c3e50' }}>{selected?.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="p-4">
+        <Modal.Body className="p-3 p-md-4">
           {selected?.imagePath && (
             <img
               src={BASE + selected.imagePath}
