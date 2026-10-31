@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Card, Table, Button, Form, Row, Col, Alert, Spinner } from 'react-bootstrap';
 import Header from '../../components/Header';
 
-const API = 'https://ddu-evangelical-backend-3.onrender.com/api';
-const BASE = 'https://ddu-evangelical-backend-3.onrender.com';
+const API = 'https://ddu-evangelical-backend-5.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend-5.onrender.com';
 
 export default function Photos() {
   const [photos, setPhotos] = useState([]);

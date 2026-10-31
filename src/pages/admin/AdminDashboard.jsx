@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaUsers, FaBook, FaCalendar, FaImage, FaFile, FaGift, FaEnvelope, FaCog, FaBullhorn } from 'react-icons/fa';
 import Header from '../../components/Header';
 
-const API = 'https://ddu-evangelical-backend-3.onrender.com';
+const API = 'https://ddu-evangelical-backend-5.onrender.com';
 
 export default function AdminDashboard() {
   const [counts, setCounts] = useState({
