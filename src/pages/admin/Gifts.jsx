@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Card, Table, Button, Badge, Alert } from 'react-bootstrap';
 import Header from '../../components/Header';
 
-const API = 'https://ddu-evangelical-backend-5.onrender.com';
+const API = 'https://ddu-evangelical-backend-6.onrender.com';
 
 export default function Gifts() {
   const [gifts, setGifts] = useState([]);

@@ -3,7 +3,7 @@ import { Container, Card, Table, Button, Form, Row, Col, Alert, Modal, Spinner }
 import { FaEdit, FaTrash, FaUserPlus } from 'react-icons/fa';
 import Header from '../../components/Header';
 
-const API = 'https://ddu-evangelical-backend-5.onrender.com/api';
+const API = 'https://ddu-evangelical-backend-6.onrender.com/api';
 
 export default function Members() {
   const [members, setMembers] = useState([]);
