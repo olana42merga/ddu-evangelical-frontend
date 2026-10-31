@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Card, Table, Button, Form, Row, Col, Alert, Badge } from 'react-bootstrap';
 import Header from '../../components/Header';
 import { getPrograms, addProgram, deleteProgram } from '../../api/programs';
+const API = 'https://ddu-evangelical-backend-6.onrender.com/api';
+const BASE = 'https://ddu-evangelical-backend-6.onrender.com';
 
 export default function Programs() {
   const [programs, setPrograms] = useState([]);

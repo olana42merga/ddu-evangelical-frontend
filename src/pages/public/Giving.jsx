@@ -37,13 +37,13 @@ export default function Giving() {
                 <hr />
                 <div className="text-center">
                   <p className="text-muted mb-1">Account Number</p>
-                  <h4 className="fw-bold">+251 912 345 678</h4>
+                  <h4 className="fw-bold">+251</h4>
                   <p className="text-muted mb-1 mt-3">Account Name</p>
                   <h5>DDU Evangelical Team</h5>
                   <Button
                     variant="success"
                     className="mt-3"
-                    onClick={() => copyToClipboard('+251912345678')}
+                    onClick={() => copyToClipboard('+25')}
                   >
                     <FaCopy className="me-2" /> Copy Number
                   </Button>
@@ -63,15 +63,15 @@ export default function Giving() {
                 <hr />
                 <div className="text-center">
                   <p className="text-muted mb-1">Account Number</p>
-                  <h4 className="fw-bold">1000 1234 5678 90</h4>
+                  <h4 className="fw-bold">1000 102769523</h4>
                   <p className="text-muted mb-1 mt-3">Account Name</p>
-                  <h5>DDU Evangelical Team</h5>
+                  <h5>Bedhatu fayisa</h5>
                   <p className="text-muted mb-1 mt-3">Branch</p>
                   <h5>Dire Dawa Main Branch</h5>
                   <Button
                     variant="primary"
                     className="mt-3"
-                    onClick={() => copyToClipboard('10001234567890')}
+                    onClick={() => copyToClipboard('1000102769523')}
                   >
                     <FaCopy className="me-2" /> Copy Number
                   </Button>

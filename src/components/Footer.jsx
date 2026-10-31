@@ -49,7 +49,8 @@ export default function Footer() {
               <li className="mb-3 d-flex align-items-start">
                 <FaPhone className="me-2 mt-1 text-primary flex-shrink-0" size={16} />
                 <span className="text-light small" style={{ opacity: 0.85 }}>
-                  +251 912 345 678
+                  +25106612678
+                  +25141452771
                 </span>
               </li>
             </ul>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Container, Card, Table } from 'react-bootstrap';
 import Sidebar from '../../components/Sidebar';
 import { getGifts } from '../../api/gifts';
+const API = 'https://ddu-evangelical-backend-6.onrender.com/api';
 
 export default function MyGifts() {
   const [gifts, setGifts] = useState([]);
